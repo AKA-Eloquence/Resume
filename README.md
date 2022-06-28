@@ -1,2 +1,2 @@
 # Resume
-https://aka-eloquence.github.io/Resume/
+https://eloquence98.github.io/Resume/
