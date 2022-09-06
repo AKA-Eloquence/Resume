@@ -14,6 +14,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg: hsla(0, 0%, 99%, 1);
+  --primary: hsla(268, 100%, 52%, 1);
+  --heading: hsla(0, 0%, 8%, 1);
+  --btn: hsla(0, 0%, 14%, 1);
+  --content: hsla(0, 0%, 24%, 1);
+  --animate-border: hsla(0, 0%, 70%, 1);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -36,10 +47,10 @@ h2 {
 }
 
 .container {
-  max-width: 1920px;
-  margin: 0 auto;
-  overflow: auto;
-  padding: 0 60px;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 60px;
 }
 
 /* NAVBAR */
@@ -56,60 +67,18 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
-
-  a {
-    color: #141414;
-    border-radius: 8px;
-    padding: 12px 16px;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: #f7f7f7;
-    }
-
-    img {
-      transition: all 0.5s ease-out;
-      position: relative;
-
-      &:hover {
-        transform: scale(1.15);
-      }
-    }
-  }
 }
 
-a {
+a i {
   color: #141414;
 }
 
-a:hover {
+a i:hover {
   color: var(--primary);
 }
 
-.cta {
-  height: 40px;
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid rgba(20, 20, 20, 0.14);
-  border-radius: 8px;
-}
-
-.cta__line {
-  width: 1px;
-  height: 100%;
-  background-color: rgba(20, 20, 20, 0.14);
-}
-
-.cta__mail p {
-  font-family: 'Poppins';
-  font-size: 14px;
-  font-weight: 500;
-}
-
 .btn {
+  
   background-color: inherit;
   border: 3px solid var(--primary);
   border-radius: 6px;
@@ -136,19 +105,19 @@ a:hover {
 /* Showcase */
 .showcase {
   max-width: 1440px;
-  text-align: center;
-  margin: 4.5rem auto;
+    text-align: center;
+    margin: 4.5rem auto;
 }
 
 .heading {
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 5rem;
+  font-weight: 700;
 }
 
 .heading2 {
-  color: #141414;
-  font-size: 56px;
-  font-weight: 600;
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .showcase p {
@@ -170,9 +139,9 @@ a:hover {
   margin: 0 1rem;
 }
 
-.showcase-btns button:nth-child(1) {
+.showcase-btns button:nth-child(1){
   color: var(--bg);
-  background-color: var(--primary);
+  background-color: var(--primary)
 }
 
 /* Animate */
@@ -202,102 +171,57 @@ a:hover {
 }
 
 /* Adding Animation */
-/* Because this is my first time working with animation, I want every single property to be selected separately if I intend to use them.! */
-.animate h1:nth-child(1) {
-  animation-name: scrolling;
-}
-
-@keyframes scrolling {
-  0% {
-    transform: translateX(100%);
+  /* Because this is my first time working with animation, I want every single property to be selected separately if I intend to use them.! */
+  .animate h1:nth-child(1) {
+    animation-name: scrolling;
   }
-  100% {
-    transform: translateX(-100%);
+  
+  @keyframes scrolling {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-}
-
-.animate h1:nth-child(2) {
-  animation-name: scrolling2;
-  animation-delay: 5s;
-}
-
-@keyframes scrolling2 {
-  0% {
-    transform: translateX(100%);
+  
+  .animate h1:nth-child(2) {
+   animation-name: scrolling2;
+   animation-delay: 5s;
   }
-  100% {
-    transform: translateX(-100%);
+  
+  @keyframes scrolling2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-}
-
-.animate h1:nth-child(3) {
-  animation-name: scrolling3;
-  animation-delay: 10s;
-}
-
-@keyframes scrolling3 {
-  0% {
-    transform: translateX(100%);
+  
+  .animate h1:nth-child(3) {
+   animation-name: scrolling3;
+   animation-delay: 10s;
   }
-  100% {
-    transform: translateX(-100%);
+  
+  @keyframes scrolling3 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-}
 
-.animate h1:nth-child(4) {
-  animation-name: scrolling4;
-  animation-delay: 4s;
-  display: none;
-}
-
-/* Footer */
-.footer-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 4rem 60px 5.5rem;
-}
-
-.card {
-  background: #ffffff;
-  box-shadow: 0px 6px 16px rgba(46, 46, 46, 0.1);
-  border-radius: 8px;
-  display: flex;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
-  transition: all 0.2s ease-in;
-}
-
-.card:hover {
-  box-shadow: 0px 14px 24px rgba(46, 46, 46, 0.1);
-  border-radius: 8px;
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  font-weight: 700;
-}
-
-.footer-wrapper .card:nth-child(1) .fab {
-  color: #793aff;
-}
-
-.footer-wrapper .card:nth-child(2) .fab {
-  color: #ff3a3a;
-}
-
-.footer-wrapper .card:nth-child(3) .fab {
-  color: #1f8f79;
-}
-
-.footer-wrapper .card:nth-child(4) .fab {
-  color: #69dec7;
-}
+  .animate h1:nth-child(4) {
+    animation-name: scrolling4;
+    animation-delay: 4s;
+    display: none;
+  }
 
 /* -----------------------------------------Media Queries-------------------------------- */
 @media screen and (max-width: 1600px) {
+
   .animate h1:nth-child(2) {
     animation-delay: 7.5s;
   }
@@ -305,9 +229,11 @@ a:hover {
   .animate h1:nth-child(3) {
     display: none;
   }
+  
 }
 
 @media screen and (max-width: 1100px) {
+
   .animate h1:nth-child(2) {
     display: none;
   }
@@ -315,6 +241,7 @@ a:hover {
   .animate h1:nth-child(4) {
     display: block;
     animation-delay: 10s;
+    
   }
 
   @keyframes scrolling4 {
@@ -325,9 +252,12 @@ a:hover {
       transform: translateX(-100%);
     }
   }
+  
 }
 
+
 @media screen and (max-width: 950px) {
+
   nav {
     padding-top: 3rem;
   }
@@ -347,8 +277,9 @@ a:hover {
 }
 
 @media screen and (max-width: 870px) {
+
   .animate h1:nth-child(4) {
-    animation-delay: 10s;
+    animation-delay: 10s; 
   }
 
   @keyframes scrolling {
@@ -370,18 +301,20 @@ a:hover {
   }
 
   .animate h1:nth-child(4) {
-    animation-delay: 9.5s;
+    animation-delay: 9.5s; 
   }
+
 }
 
 @media screen and (max-width: 644px) {
+
   nav {
     flex-direction: column;
     gap: 1.5rem;
   }
 
   .socials {
-    background-color: #e2e2e22b;
+    background-color: #E2E2E22b;
     padding: 1rem 1rem 0.8rem;
     border-radius: 0.5rem;
   }
@@ -395,7 +328,7 @@ a:hover {
     }
   }
   .animate h1:nth-child(4) {
-    animation-delay: 10.2s;
+    animation-delay: 10.2s; 
   }
 }
 
@@ -412,6 +345,7 @@ a:hover {
   .animate h1:nth-child(4) {
     display: none;
   }
+
 }
 
 @media screen and (max-width: 545px) {
@@ -449,7 +383,7 @@ a:hover {
       transform: translateX(-180%);
     }
   }
-  /* Footer query */
+/* Footer query */
   .footer-wrapper {
     padding: 4rem 0px;
   }
