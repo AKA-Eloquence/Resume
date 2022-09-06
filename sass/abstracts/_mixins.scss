@@ -1,0 +1,7 @@
+@mixin boxShadiw($value) {
+  box-shadow: 4px 16px 24px $value;
+};
+
+@mixin backgroundColor($value) {
+    background-color: $value;
+};

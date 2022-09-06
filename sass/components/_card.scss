@@ -1,0 +1,145 @@
+.skill__cards__section {
+  width: 63%;
+  margin: 0 auto;
+  
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.skills__card {
+  border: solid 2px #f7f7f7;
+  border-radius: 10px;
+  display: inline-flex;
+  padding: 16px;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    border: solid 2px transparent;
+    transform: scale(1.002);
+    gap: 2rem;
+
+    &.html-wrapper {
+      @include boxShadiw($color-html-shadow);
+    }
+    &.css-wrapper {
+      @include boxShadiw($color-css-shadow);
+    }
+    &.sass-wrapper {
+      @include boxShadiw($color-sass-shadow);
+    }
+    &.js-wrapper {
+      @include boxShadiw($color-js-shadow);
+    }
+    &.react-wrapper {
+      @include boxShadiw($color-react-shadow);
+    }
+    &.ts-wrapper {
+      @include boxShadiw($color-ts-shadow);
+    }
+    &.redux-wrapper {
+      @include boxShadiw($color-redux-shadow);
+    }
+    &.git-wrapper {
+      @include boxShadiw($color-git-shadow);
+    }
+    &.node-wrapper {
+      @include boxShadiw($color-node-shadow);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-family: "Poppins", sans-serif;
+    color: #141414;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__body {
+    font-family: "Poppins", sans-serif;
+    color: rgba(20, 20, 20, 0.56);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__wrapper {
+    border: 2px solid #f7f7f7;
+    border-radius: 4px;
+    max-width: 320px;
+    margin: 100px;
+    padding: 16px;
+    transition: all 0.4s ease;
+    transition: border 0s;
+  }
+}
+
+.fill-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 4px;
+    transition: all 0.5s ease-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.html-wrapper.fill-line::before {
+  @include backgroundColor($color-html-line);
+}
+
+.css-wrapper.fill-line::before {
+  @include backgroundColor($color-css-line);
+}
+
+.sass-wrapper.fill-line::before {
+  @include backgroundColor($color-sass-line);
+}
+
+.js-wrapper.fill-line::before {
+  @include backgroundColor($color-js-line);
+}
+
+.react-wrapper.fill-line::before {
+  @include backgroundColor($color-react-line);
+}
+
+.ts-wrapper.fill-line::before {
+  @include backgroundColor($color-ts-line);
+}
+
+.redux-wrapper.fill-line::before {
+  @include backgroundColor($color-redux-line);
+}
+
+.git-wrapper.fill-line::before {
+  @include backgroundColor($color-git-line);
+}
+
+.node-wrapper.fill-line::before {
+  @include backgroundColor($color-node-line);
+}
