@@ -1,0 +1,25 @@
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 60px;
+}
+
+.cv-download-link {
+  color: $primary;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-decoration-line: underline;
+
+  position: absolute;
+  left: 40px;
+  top: 70px;
+}
+
+.inline-block-elm {
+  display: inline-block;
+  position: relative;
+}

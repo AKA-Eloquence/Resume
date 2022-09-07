@@ -1,0 +1,20 @@
+/* Showcase */
+.showcase {
+  max-width: 1440px;
+  text-align: center;
+  margin: 6rem auto 4.5rem;
+
+  p {
+    max-width: 600px;
+    font-weight: 600;
+    margin: 1rem auto;
+  }
+
+  .showcase-btns {
+    margin: 2.5rem auto;
+
+    .btn {
+      margin: 0 2rem;
+    }
+  }
+}

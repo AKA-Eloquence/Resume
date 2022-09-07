@@ -1,0 +1,32 @@
+.btn {
+  border: none;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 13px 28px;
+  min-width: 10rem;
+
+  transition: all 0.3s ease-out;
+}
+
+.btn-dark {
+  color: $bg;
+  background-color: $primary;
+}
+
+.btn-light {
+  color: $primary;
+  background-color: $secondary;
+
+  &:hover {
+    background-color: $primary;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.btn-border {
+  border: 3px solid $primary;
+}
